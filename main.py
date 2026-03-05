@@ -222,14 +222,16 @@ def main():
             turn_count = 0
             max_turns = 10
             
-            with console.status("[bold purple]...processing...[/bold purple]", spinner="dots"):
+            with console.status("[bold purple]...processing...[/bold purple]", spinner="dots") as status:
                 while turn_count < max_turns:
                     turn_count += 1
                     response = get_brahmos_response(messages)
                     messages.append(response)
                     
                     if response.get("content"):
+                        status.stop()
                         log_brahmos(response["content"])
+                        status.start()
                     
                     if "tool_calls" in response and response["tool_calls"]:
                         for tool_call in response["tool_calls"]:
@@ -246,6 +248,7 @@ def main():
                                 })
                                 continue
                             
+                            status.stop()
                             log_tool(f"Executing {func_name}...")
                             tool_func = TOOLS.get(func_name)
                             if tool_func:
@@ -263,6 +266,7 @@ def main():
                                     "name": func_name,
                                     "content": f"Error: Tool {func_name} not found."
                                 })
+                            status.start()
                         continue
                     else:
                         break
