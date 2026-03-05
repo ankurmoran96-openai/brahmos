@@ -1,4 +1,3 @@
-import requests
 import json
 import sys
 import os
@@ -18,6 +17,8 @@ def ensure_dependencies():
 
 ensure_dependencies()
 
+# --- Third-Party Imports (Safe to import now) ---
+import requests
 from colorama import Fore, Style, init
 init(autoreset=True)
 
