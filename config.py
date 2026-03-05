@@ -10,7 +10,7 @@ MODEL_NAME = "openai/gpt-4o"
 
 # ====== SECRETS ======
 # Note: If this is pushed to GitHub, anyone can use this key!
-MODEL_API_KEY = "sk-av-v1-noq_Ig2pG6epdhC880sybnd4Sb_j2zs4ZiZUj5tDK05HqhLgy7GcwwGrnyloFufcEuf7_8jMcQRP2RsWIwXBk4Gwmdw2IU5jvKPWRQ58cO7sUlZSsfWBKAj"
+MODEL_API_KEY = "API_TOKRN"
 # ===============================
 
 # Branding
