@@ -19,7 +19,7 @@ You can install BrahMos directly from GitHub. This will automatically download t
 
 **Run this single command in your terminal:**
 ```bash
-pip install git+https://github.com/ankurmoran96-openai/TERMUX-AGENT-2.git
+pip install git+https://github.com/ankurmoran96-openai/brahmos.git
 ```
 
 ## 💻 Usage
